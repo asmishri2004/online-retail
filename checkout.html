@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="checkout.js" defer></script>
+    <title>Checkout</title>
+</head>
+<body>
+    <div class="checkout">
+        <h1>Checkout</h1>
+        
+          <a href="payment.html">Proceed to Pay using UPI ,Gpay and Debit or Credit Card</a>
+
+        <!-- Step 1: Cart Review -->
+        <section id="cartReview" class="checkout-step">
+            <h2>Cart Review</h2>
+            <!-- Display cart items and allow editing -->
+            <ul id="cartItems">
+                <!-- Example cart items -->
+                <li>Product 1 - $20.00</li>
+                <li>Product 2 - $15.00</li>
+            </ul>
+        </section>
+        
+        <!-- Step 2: User Information -->
+        <section id="userInfo" class="checkout-step">
+            <h2>User Information</h2>
+            <!-- Form to collect shipping information -->
+            <form id="shippingForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </form>
+        </section>
+        
+        <!-- Step 3: Shipping Method -->
+        <section id="shippingMethod" class="checkout-step">
+            <h2>Shipping Method</h2>
+            <!-- Display shipping options and allow selection -->
+            <label>
+                <input type="radio" name="shippingOption" value="standard" checked> Standard Shipping - $5.00
+            </label>
+            <label>
+                <input type="radio" name="shippingOption" value="express"> Express Shipping - $10.00
+            </label>
+        </section>
+        
+        <!-- Step 4: Payment Details -->
+        <section id="paymentDetails" class="checkout-step">
+            <h2>Payment Details</h2>
+            <!-- Form to collect payment information -->
+            <form id="paymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required>
+                <label for="expirationDate">Expiration Date:</label>
+                <input type="text" id="expirationDate" placeholder="MM/YY" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+            </form>
+        </section>
+       <div id="paymentOptions">
+<!--
+                <label>
+                    <input type="radio" name="paymentMethod" value="gpay"> Google Pay (GPay)
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="upi"> UPI (Unified Payments Interface)
+                </label>
+-->
+                <label>
+                    <input type="radio" name="paymentMethod" value="cod"> Cash on Delivery (COD)
+                </label>
+                
+                 <!-- Payment form for card details -->
+                <div id="cardPaymentForm" style="display: none;">
+                    <h3>Card Payment</h3>
+                    <form id="cardPaymentForm">
+                        <label for="cardName">Name on Card:</label>
+                        <input type="text" id="cardName" required>
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" required>
+                        <button type="button" onclick="processCardPayment()">Pay Now</button>
+                    </form>
+                </div>
+                
+                <!-- Button to proceed -->
+                <div id="proceedButton" style="display: none;">
+                    <button onclick="proceedPayment()">Proceed</button>
+                </div>
+            </div>
+<!--
+        </section>
+            </div>
+-->
+            <!-- Payment form or instructions for each method (not for actual payment) -->
+            <div id="paymentInstructions">
+                <!-- Instructions for each payment method -->
+                <div id="gpayInstructions" class="payment-instructions">
+                    <!-- Example instructions for GPay -->
+                    <p>Make the payment using Google Pay to the following UPI ID:</p>
+                    <p>example@example.com</p>
+                </div>
+                <div id="upiInstructions" class="payment-instructions">
+                    <!-- Example instructions for UPI -->
+                    <p>Use your UPI app to send payment to the following UPI ID:</p>
+                    <p>example@example.com</p>
+                </div>
+                <div id="codInstructions" class="payment-instructions">
+                    <!-- Example instructions for COD -->
+                    <p>You can pay in cash when your order is delivered.</p>
+                </div>
+                <button id="proceedToBuy" onclick="placeOrder()">Proceed to Buy</button>
+
+<script>
+    function placeOrder() {
+        // You can add order placement logic here (e.g., sending order details to a server)
+
+        // Redirect to the order confirmation page
+        window.location.href = 'order-confirmation.html';
+    }
+</script>
+
+            </div>
+<!--        </section>-->
+        
+        <!-- Step 5: Order Review -->
+        <section id="orderReview" class="checkout-step">
+            <h2>Order Review</h2>
+            <!-- Display order summary for user confirmation -->
+            <div id="orderSummary">
+                <!-- Example order summary -->
+                <p>Total Items: 2</p>
+                <p>Subtotal: $35.00</p>
+                <p>Shipping: $5.00</p>
+                <p>Total: $40.00</p>
+            </div>
+        </section>
+        
+        <!-- Step 6: Confirmation -->
+        <section id="confirmation" class="checkout-step">
+            <h2>Confirmation</h2>
+            <!-- Display a thank you message and order details -->
+            <p>Thank you for your order!</p>
+            <p>Order Number: #12345</p>
+        </section>
+    </div>
+</body>
+</html>

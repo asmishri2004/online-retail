@@ -1,0 +1,77 @@
+<form id="paymentForm">
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" required>
+    <label for="expirationDate">Expiration Date:</label>
+    <input type="text" id="expirationDate" placeholder="MM/YY" required>
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" required>
+    <button type="submit">Pay Now</button>
+</form>
+/* tracking.css */
+
+body {
+    background-color: #000; /* Black */
+    color: black; /* White */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('tracking.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Container style */
+.tracking {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #111; /* Dark gray */
+    border: 1px solid white; /* Dark gray border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow */
+    text-align: center;
+}
+
+/* Heading style */
+h1 {
+    color: #fff; /* Neon yellow, similar to Amazon's highlight color */
+}
+
+/* Input label style (Enter your Order ID) */
+p{
+    color: #fff; /* Neon yellow for the specific label */
+}
+
+/* Input field style (Order ID input) */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid white; /* Dark gray border */
+    border-radius: 5px;
+    background-color: #222; /* Slightly lighter than the background */
+    color: #fff; /* White text for better visibility */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Neon yellow, similar to Amazon's highlight color */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ffdb4d; /* Lighter neon yellow on hover */
+}

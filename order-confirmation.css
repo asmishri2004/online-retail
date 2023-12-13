@@ -1,0 +1,90 @@
+/* order-confirmation.css */
+
+/* Style the body */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the order confirmation container */
+.order-confirmation {
+    text-align: center;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+/* Style the headings and text */
+.order-confirmation h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-confirmation p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style the order ID span */
+.order-confirmation #orderID {
+    font-weight: bold;
+    color: #ff9900;
+}
+
+/* Style the link to track the order */
+.order-confirmation a {
+    text-decoration: none;
+    background-color: #ff9900;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Other existing styles for headings, text, and links */
+/* Add styles for the tick symbol */
+.tick-symbol {
+    font-size: 48px; /* Adjust the size as needed */
+    margin-bottom: 10px;
+    color: #00ff00; /* Green color for the tick symbol */
+    animation: tickAnimation 1s infinite alternate; /* Apply the animation */
+}
+
+/* Define the animation */
+@keyframes tickAnimation {
+    0% {
+        transform: scale(1); /* Initial scale (100%) */
+    }
+    100% {
+        transform: scale(2.8); /* Scale up to 120% */
+    }
+}
+
+/* Existing styles for the order confirmation container */
+.order-confirmation {
+    text-align: center;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+/* Other existing styles for headings, text, and links */

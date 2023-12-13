@@ -1,0 +1,94 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a black background and neon text color */
+body {
+    background-color: #000;
+    color: #0ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('profilenew.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* Style the user profile container */
+.user-profile {
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #0ff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    max-width: 400px;
+}
+
+/* Style the headings and text */
+.user-profile h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0ff;
+}
+
+.user-profile h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #f06;
+}
+
+.user-profile p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style the input and button for order tracking */
+#orderIDInput {
+    background-color: #000;
+    color: #0ff;
+    border: 1px solid #0ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f06;
+    color: #fff;
+}
+
+/* Style the order history list */
+#orderHistory {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#orderHistory li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Apply additional styles or modify as needed to achieve the desired Amazon-like appearance. */

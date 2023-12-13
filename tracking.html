@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="tracking.css"> 
+    <title>Order Tracking</title>
+</head>
+<body>
+    <div class="tracking">
+        <h1>Track Your Order</h1>
+        <p>Enter your Order ID:</p>
+        <input type="text" id="orderIDInput">
+        <button onclick="trackOrder()">Track Order</button>
+        <div id="orderStatus"></div>
+    </div>
+
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Retrieve the order ID from the URL
+        const orderID = getQueryParam('orderID');
+
+        // Display the order ID in the input field
+        document.getElementById('orderIDInput').value = orderID;
+
+        // Function to track the order (you can add your tracking logic here)
+        function trackOrder() {
+            const orderStatus = 'Your order is on the way!'; 
+            const orderStatusElement = document.getElementById('orderStatus');
+            orderStatusElement.textContent = orderStatus;
+            orderStatusElement.style.color = '#fff'; // Set the text color to white
+            document.getElementById('orderStatus').textContent = orderStatus;
+        }
+    </script>
+</body>
+</html>

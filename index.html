@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Online Store</title>
+</head>
+<body>
+   
+    <header>
+       <div class="auth-buttons">
+            <button class="auth-button" id="registerButton">Register</button>
+            <button class="auth-button" id="loginButton">Login</button>
+        </div>
+        <h1>Online Store</h1>
+        <div class="cart-icon">CART</div>
+            <span class="cart-count">0</span>
+    </header>
+    <div class="modal-bg" id="modalBg">
+        <div class="auth-modal" id="authModal">
+    <!-- Inside your navigation bar -->
+    
+    <div class="navbar">
+    <!-- Other navigation items -->
+    <div class="profile-icon" onclick="openUserProfile()" style="position: absolute; top: 0; left: 0;">
+        <img src="profile.jpg" alt="User Profile">
+    </div>
+</div>
+
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2></h2>
+            <form id="authForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit" id="authSubmit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <main id="product-list">
+        <!-- Product items will be dynamically added here -->
+    </main>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <a href="checkout.html">Proceed to Checkout</a>
+             <a href="tracking.html">Track Your Order</a>   
+             <!-- In index.html -->
+<a href="profile.html">View Your Profile</a>
+         
+        </div>
+    </div>
+</body>
+</html>

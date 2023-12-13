@@ -1,0 +1,161 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('background.jpg'); /* Replace 'your-image.jpg' with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+header {
+    background-color: #3498db; /* Blue Header background */
+    color: #fff; /* White Text */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.auth-button {
+    background-color: #1abc9c; /* Teal Button background */
+    color: #fff; /* White Text */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #111; /* White Heading Text */
+}
+
+h2 {
+    background-color: #1abc9c; /* Teal Heading background */
+    color: #fff; /* White Text */
+    padding: 10px;
+    margin-top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    border-radius: 80%;
+    right: -390px;
+    top: 15px;
+    gap: 10px;
+}
+
+.cart-count {
+    background-color: #d35400; /* Orange text background */
+    color: #fff; /* White Text */
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: relative;
+    top: -10px;
+    right: -10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    background-color: #1abc9c; /* Teal Button background */
+    color: #fff; /* White Text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buy-now {
+    background-color: #d35400; /* Orange Button background */
+    color: #fff; /* White Text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-confirmation {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.profile-icon img {
+    width: 30px; /* Adjust the width to make the icon smaller */
+    height: 30px; /* Adjust the height to make the icon smaller */
+}
+/* Example of a media query for tablets */
+@media (min-width: 768px) {
+    /* CSS styles for tablets and larger screens */
+}
+/* ... (your existing CSS) */
+
+.add-to-cart-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #1abc9c; /* Teal Button background */
+    color: #fff; /* White Text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
